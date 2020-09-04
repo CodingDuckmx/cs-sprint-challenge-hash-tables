@@ -7,6 +7,8 @@ def intersection(arrays):
     dct = {}
     result = []
 
+    # Looping thru the lists
+
     for inner_array in arrays:
 
         for item in inner_array:
@@ -15,7 +17,12 @@ def intersection(arrays):
 
                 dct[item] = 0
             
+            # Counting each appearance
+
             dct[item] += 1
+
+    # if the counting match the number of inner arrays, it means
+    # this number is in all arrays.
 
     for key,value in dct.items():
 

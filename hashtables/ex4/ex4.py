@@ -4,9 +4,12 @@ def has_negatives(a):
     """
     # Your code here
 
+    # built a dictionary of all positive numbers
     dct = {i:None for i in a if i > 0}
 
     result = []
+
+    # Verify if for each negative number in the list, there's its negative.
 
     for i in a:
 
@@ -14,9 +17,9 @@ def has_negatives(a):
 
             if -i in dct:
 
-                result.append(-i)
+                # if matching, append it.
 
-    
+                result.append(-i)
 
     return result
 

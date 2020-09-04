@@ -11,11 +11,18 @@ def reconstruct_trip(tickets, length):
     """
     # Your code here
     
+    # A dictionary of form {Departure : Destination}
+
     flights = {ticket.source : ticket.destination for ticket in tickets}
+
+    # Append the Departure of all the trip to a route list.
 
     route = [flights['NONE']]
 
     for _ in range(length-1):
+
+        # Look into the dictionary for the last key departure and add
+        # its destination, and so on.
 
         route.append(flights[route[-1]])
 
