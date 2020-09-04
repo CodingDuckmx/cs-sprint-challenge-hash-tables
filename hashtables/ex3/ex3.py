@@ -4,6 +4,31 @@ def intersection(arrays):
     """
     # Your code here
 
+    dct = {item : None for item in arrays[0]}
+    removable_keys  = []
+    result = []
+
+    for inner_list in arrays[1:]:
+
+        for key in dct.keys():
+
+            if key not in inner_list:
+
+                removable_keys.append(key)
+
+    for key in removable_keys:
+
+        try:
+
+            dct.pop(key)
+
+        except:
+
+            continue        
+
+    print(dct)
+
+
     return result
 
 

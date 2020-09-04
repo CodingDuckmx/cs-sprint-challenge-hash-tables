@@ -4,6 +4,20 @@ def has_negatives(a):
     """
     # Your code here
 
+    dct = {i:None for i in a if i > 0}
+
+    result = []
+
+    for i in a:
+
+        if i < 0:
+
+            if -i in dct:
+
+                result.append(-i)
+
+    
+
     return result
 
 
