@@ -4,6 +4,33 @@ def intersection(arrays):
     """
     # Your code here
 
+    dct = {}
+    result = []
+
+    # Looping thru the lists
+
+    for inner_array in arrays:
+
+        for item in inner_array:
+
+            if item not in dct:
+
+                dct[item] = 0
+            
+            # Counting each appearance
+
+            dct[item] += 1
+
+    # if the counting match the number of inner arrays, it means
+    # this number is in all arrays.
+
+    for key,value in dct.items():
+
+        if value == len(arrays):
+
+            result.append(key)
+
+
     return result
 
 
